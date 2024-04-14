@@ -1,5 +1,240 @@
+//====================================================================================================
+.header {
+
+    // .header__container
+
+    &__container {}
+
+    // .header__body
+
+    &__body {
+        padding: rem(45) 0;
+
+        @media (max-width:$tablet) {
+            padding: rem(25) 0;
+        }
+
+        @media (max-width:$mobile) {
+            padding: rem(10) 0;
+        }
+    }
+}
+
+.body-header {
+    display: flex;
+    gap: rem(10);
+    // .body-header__logo
+
+    &__logo {
+        & img {
+            height: 100%;
+            max-height: rem(50);
+        }
+    }
+
+    // .body-header__wallets
+
+    &__wallets {
+        display: flex;
+        column-gap: rem(10);
+
+        @media (min-width:$mobile) {
+            flex-grow: 1;
+        }
+
+        @media (max-width:$mobile) {
+            align-self: center;
+            align-items: center;
+        }
+    }
+
+    // .body-header__button
+
+    &__button {
+        width: rem(110);
+        padding: rem(13) 0;
+        text-align: center;
+        background-color: #AC75D8;
+        align-self: start;
+        color: #fff;
+        border-radius: rem(5);
+        margin-right: rem(5);
+        transition: background 0.2s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgb(156, 95, 168);
+            }
+        }
+
+
+        //display: inline-block;
+        @media (min-width:$mobile) {
+            margin-top: rem(8);
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    flex: 0 1 22%;
+
+    @media (max-width:$mobile) {
+        align-items: center;
+    }
+
+    @media (max-width:$mobile) {
+        flex-grow: 1;
+    }
+
+    // .logo__img
+
+    &__img {
+        display: inline-block;
+    }
+
+    // .logo__text
+
+    &__text {
+        max-width: 70px;
+        color: #637AAE;
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: 1.2;
+
+        @media (min-width:$mobile) {
+            margin-top: rem(30);
+        }
+
+        @media (max-width:$mobile) {
+            margin-left: rem(10);
+        }
+    }
+}
+
+.menu {
+    flex: 1 1 auto;
+
+    @media (max-width:$mobile) {
+        width: 100%;
+        position: absolute;
+        top: rem(70);
+        left: -100%;
+        transition: all 0.3s ease;
+        padding: rem(25) 0;
+        font-size: rem(25);
+    }
+
+    // .menu__icon
+
+    &__icon {}
+
+    // .menu__body
+
+    &__body {}
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .menu__item
+
+    &__item {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: rem(20);
+
+        &:not(:last-child) {
+            margin-right: rem(23);
+        }
+    }
+
+    @media (max-width:$mobile) {
+        & .menu__list {
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+
+            & .menu__item {
+                margin: 0 0 rem(16) 0;
+            }
+        }
+
+        & .menue-litle__list {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            height: 100%;
+
+            & .menue-litle__item {
+                margin: 0 0 rem(12) 0;
+            }
+        }
+    }
+
+    // .menu__link
+
+    &__link {
+        color: inherit;
+        transition: color 0.2s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #42598f;
+            }
+        }
+    }
+}
+
+.menu-open .menu {
+    left: 0;
+    height: 100%;
+    overflow: scroll;
+    background: #fff;
+    z-index: 99;
+}
+
+.icon-menu {}
+
+.menue-litle {
+
+    // .menue-litle__list
+
+    &__list {
+        display: flex;
+    }
+
+    // .menue-litle__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: rem(23);
+        }
+    }
+
+    // .menue-litle__link
+
+    &__link {
+        color: inherit;
+        transition: color 0.2s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #42598f;
+            }
+        }
+    }
+}
+
+//====================================================================================================
+
 //Burger
-/*
+
 .icon-menu {
     display: none;
 
@@ -40,6 +275,9 @@
                 width: 0;
             }
 
+            &::before,
+            &::after {}
+
             &::before {
                 top: calc(50% - rem(1));
                 transform: rotate(-45deg);
@@ -52,6 +290,3 @@
         }
     }
 }
-*/
-
-// Стили header

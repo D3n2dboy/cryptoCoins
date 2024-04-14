@@ -1,1 +1,369 @@
 // Стили footer
+
+//====================================================================================================
+.footer {
+
+    // .footer__container
+
+    &__container {}
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+    }
+
+    // .footer__copy
+
+    &__copy {}
+}
+
+.top-footer {
+    padding: rem(67) rem(60) 0 rem(60);
+
+    @media (max-width: $pc) {
+        padding: rem(50) rem(30) 0 rem(30);
+    }
+
+    @media (max-width:$tablet) {
+        padding: rem(50) 0 0 0;
+    }
+
+    @media (max-width:$mobile) {
+        flex-direction: column;
+    }
+
+    // .top-footer__guardarian
+
+    &__guardarian {
+        flex: 0 0 rem(340);
+        padding: 0 rem(40) 0 0;
+
+        @media (max-width:$mobile) {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+
+        @media (min-width:$mobile) {
+            border-right: 1px solid #F1F2FA;
+            margin-right: rem(47);
+
+        }
+    }
+
+    // .top-footer__logo
+
+    &__logo {
+
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+
+        & .logo__img {
+            height: 73px;
+        }
+
+
+        & .logo__text {
+            font-size: rem(30);
+            font-weight: 300;
+            letter-spacing: -1px;
+
+            @media (min-width:$mobile) {
+                margin-top: rem(50);
+            }
+
+            @media (max-width:$mobile) {
+                margin-left: rem(10);
+            }
+        }
+    }
+
+    // .top-footer__adress
+
+    &__adress {
+        color: #BDBDBD;
+        font-weight: 400;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .top-footer__apps
+
+    &__apps {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .top-footer__socials
+
+    &__socials {}
+
+    // .top-footer__nav
+
+    &__nav {}
+}
+
+.logo {
+
+    // .logo__img
+
+    &__img {}
+
+    // .logo__text
+
+    &__text {}
+}
+
+.apps-icons {
+    display: flex;
+
+    // .apps-icons__body
+
+    &__body {
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+    }
+
+    // .apps-icons__img
+
+    &__img {}
+}
+
+.social-icons {
+
+    // .social-icons__body
+
+    &__body {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: rem(7);
+        }
+    }
+
+    // .social-icons__img
+
+    &__img {}
+}
+
+.nav-footer {
+
+    // .nav-footer__spollers
+
+    &__spollers {}
+
+    // .nav-footer__spollers-item
+
+    &__spollers-item {
+        &:not(:last-child) {
+            margin-bottom: rem(27);
+        }
+    }
+
+    // .nav-footer__spollers-title
+
+    &__spollers-title {
+        position: relative;
+        font-size: rem(22);
+        font-weight: 700;
+        line-height: 130%;
+        color: #455A64;
+
+        &:not(:last-child) {
+            margin-bottom: rem(9);
+        }
+    }
+
+    //.nav-footer__spollers-online
+
+    &__spollers-online {
+        position: absolute;
+        top: -5px;
+        right: 0;
+        transform: translateX(110%);
+        color: #22B2B7;
+        display: flex;
+        align-items: center;
+        font-size: rem(13);
+
+        &::before {
+            content: "";
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            background-color: #22B2B7;
+            margin-right: rem(3);
+        }
+    }
+
+
+    // .nav-footer__spollers-body
+
+    &__spollers-body {}
+
+    // .nav-footer__spollers-link
+
+    &__spollers-link {
+        display: inline-block;
+        color: #637AAE;
+        font-weight: 400;
+        margin: rem(5) 0;
+
+        &:not(:last-child) {
+            padding-right: rem(6);
+            border-right: 1px solid #F1F2FA;
+            margin-right: rem(6);
+        }
+    }
+}
+
+.spollers {
+
+    // .spollers__item
+
+    &__item {}
+
+    // .spollers__title
+
+    &__title {}
+
+    // .spollers__body
+
+    &__body {}
+}
+
+.copy-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: rem(23) rem(60) rem(21) rem(60);
+    padding-top: rem(23);
+    border-top: 1px solid #ebebeb;
+
+
+    @media (max-width: $pc) {
+        margin: rem(30) rem(20);
+    }
+
+    @media (max-width:$tablet) {
+        margin: rem(25) 0 0 0;
+        gap: rem(25);
+    }
+
+    // .copy-footer__rights
+
+    &__rights {
+        flex: 0 0 rem(340);
+        color: #BDBDBD;
+        font-weight: 400;
+        line-height: 1.3;
+        padding: 0 rem(15) 0 rem(14);
+
+
+        @media (min-width:$tablet) {
+            border-right: 1px solid #ebebeb;
+        }
+
+        @media (max-width:$tablet) {
+            flex: 1 0 100%;
+            order: 1;
+            text-align: center;
+            padding: rem(12) 0;
+        }
+    }
+
+    // .copy-footer__paycard
+    &__paycard {
+        flex: 0 0 293px;
+    }
+
+    // .copy-footer__subscribe
+
+    &__subscribe {
+        flex: 1 1 293px;
+    }
+}
+
+.paycard-footer {
+    display: flex;
+    align-items: center;
+
+    @media (min-width:$tablet) {
+        justify-content: center;
+    }
+
+    // .paycard-footer__body
+
+    &__body {
+        &:not(:last-child) {
+            margin-right: rem(38);
+        }
+    }
+
+    // .paycard-footer__img
+
+    &__img {}
+}
+
+.subscribe-form {
+
+    @media (min-width:$pc) {
+        margin-right: rem(22);
+    }
+
+    // .subscribe-form__line
+
+    &__line {
+        position: relative;
+        width: 100%;
+    }
+
+    // .subscribe-form__input
+
+    &__input {
+        width: 100%;
+        color: rgba(69, 90, 100, 0.50);
+        border: 1px solid #CDD4FD;
+        padding: rem(11) rem(20) rem(11) rem(10);
+        border-radius: rem(5);
+        line-height: 1.6;
+    }
+
+    // .subscribe-form__button
+
+    &__button {
+        position: absolute;
+        top: rem(5);
+        right: rem(5);
+        height: 40px;
+        width: 40px;
+        padding: rem(20);
+        background-color: #7393E9;
+        border-radius: rem(5);
+
+        &::before {
+            position: absolute;
+            top: 13px;
+            left: 12px;
+            content: url('/img/footer/arrow.svg');
+        }
+    }
+}
+
+.input {
+
+    // .input__line
+
+    &__line {}
+}
+
+//====================================================================================================
