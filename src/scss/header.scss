@@ -59,14 +59,12 @@
         color: #fff;
         border-radius: rem(5);
         margin-right: rem(5);
-        transition: background 0.2s ease;
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: rgb(156, 95, 168);
+                background-color: #517CCD;
             }
         }
-
 
         //display: inline-block;
         @media (min-width:$mobile) {
@@ -185,7 +183,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                color: #42598f;
+                color: #cf5fe6;
             }
         }
     }
@@ -225,7 +223,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                color: #42598f;
+                color: #f03dc9;
             }
         }
     }

@@ -218,6 +218,18 @@
         font-weight: 400;
         margin: rem(5) 0;
 
+        /*срабатывает при клике пили переходе на tab */
+        &:focus {}
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #a538a0;
+            }
+        }
+
+        /*удерживает кнопку мыши на элементе*/
+        &:active {}
+
         &:not(:last-child) {
             padding-right: rem(6);
             border-right: 1px solid #F1F2FA;

@@ -11,3 +11,21 @@
 
 
 // Прочее
+
+.button {
+    display: inline-block;
+    transition: all 0.2s ease;
+
+    /*срабатывает при клике пили переходе на tab */
+    &:focus {
+        outline: 2px solid #000;
+        outline-offset: 3px;
+    }
+
+    &:hover {}
+
+    /*удерживает кнопку мыши на элементе*/
+    &:active {
+        transform: translateY(2px);
+    }
+}
